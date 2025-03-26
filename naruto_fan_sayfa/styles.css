@@ -1,0 +1,284 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-image: url('images/background.jpg');
+    background-size: cover; /* Görseli ekranı kaplayacak şekilde boyutlandırır */
+    background-position: center; /* Görseli ortalar */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engeller */
+    background-attachment: fixed; /* Görseli sabitler ve tüm sayfayı kaplar */
+    color: #333;
+    position: relative; /* Pozisyon ayarı */
+}
+
+body::before {
+    content: ""; /* Boş bir içerik oluştur */
+    position: absolute; /* Kesin konumlandırma */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0.0, 0.0, 0.0, 0.0); /* %30 opak siyah */
+    z-index: 1; /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+main, header, footer {
+    position: relative; /* İçerik alanlarının üstüne gelmesi için */
+    z-index: 2; /* Metin ve içerik alanlarının üstte görünmesi için */
+}
+
+main h2 {
+    font-size: 2.5em; /* Daha büyük yazı boyutu */
+    color: white; /* Beyaz renk */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Gölge efekti */
+    margin-bottom: 20px; /* Altındaki boşluk */
+}
+
+h1, h2, h3, h4, p, blockquote {
+    color: white; /* Yazı rengi */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Gölge efekti */
+}
+
+header {
+    background-color: rgba(255, 165, 0, 0.8); /* Saydam Turuncu */
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+}
+
+nav a {
+    color: white; /* Beyaz metin rengi */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Saydam beyaz */
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.character-preview {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.character-card {
+    background-color: rgba(139, 69, 19, 0.8); /* Saydam Kahverengi */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Hafif beyaz kenar */
+    border-radius: 10px;
+    margin: 15px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.character-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(139, 69, 19, 0.8); /* Saydam Kahverengi */
+    color: white; /* Beyaz metin rengi */
+}
+
+section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(255, 165, 0, 0.7); /* Saydam turuncu */
+    border-radius: 10px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #fff;
+    border-left: 3px solid white;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+.character-image {
+    display: block; /* Blok eleman yap */
+    max-width: 300px; /* Maksimum genişliği ayarla */
+    height: auto; /* Yüksekliği otomatik olarak ayarla */
+    margin: 0 auto 20px; /* Ortala ve alt boşluk ekle */
+    border-radius: 10px; /* Kenarları yuvarla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+.character-description {
+   
+    color: white; /* Beyaz yazı rengi */
+    padding: 15px; /* İç boşluk */
+    border-radius: 10px; /* Kenarları yuvarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Gölge efekti */
+    margin: 20px 0; /* Üst ve alt boşluk */
+    font-size: 1.1em; /* Yazı boyutunu artır */
+    line-height: 1.5; /* Satır aralığını artır */
+}
+
+.naruto-background, .sasuke-background, .sakura-background, .kakashi-background{
+    padding: 10px; /* İç boşluk */
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 20px auto; /* Ortalamak için üstten ve alttan boşluk ekledik */
+    border-radius: 10px; /* Kenarları yuvarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Hafif gölge efekti */
+    color: white; /* Yazı rengini beyaz yap */
+}
+
+.naruto-background {
+    background-color: rgba(255, 165, 0, 0.7); /* Saydam turuncu arka plan */
+}
+
+.sasuke-background {
+    background-color: rgba(0, 0, 128, 0.7); /* Saydam lacivert arka plan */
+}
+
+h1 {
+    font-size: 4.5em; /* Büyük yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    font-style: italic; /* İtalik stil */
+    color: white; /* Beyaz renk */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Gölge efekti */
+    margin: 0; /* Alt boşluğu kaldır */
+    line-height: 1.2; /* Satır yüksekliği ayarı */
+    padding: 10px; /* İç boşluk */
+    border: 5px solid rgba(255, 255, 0, 0.5); /* Saydam sarı çerçeve */
+    border-radius: 10px; /* Kenar yuvarlama */
+    background-color: rgba(255, 255, 0, 0.3); /* Saydam sarı arka plan */
+    display: inline-block; /* Çerçevenin metne göre oturması için */
+}
+
+h2 {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    /*font-size: 3.5em;    sadece denemedir salla
+    font-weight: bold; 
+    line-height: 1.0;*/
+}
+
+/* Bağlantılardaki alt çizgiyi kaldırır */
+a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+/* H3 başlıklarındaki alt çizgiyi kaldırır, eğer varsa */
+h3 {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+header {
+    background-color: rgba(255, 140, 0, 0.8); /* Açık turuncu arka plan */
+    padding: 30px;
+    text-align: center;
+}
+.button-style {
+    border: 2px solid #ffffff; /* Beyaz çerçeve */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px; /* Butonları birbirinden uzaklaştırır */
+    background-color: rgba(255, 234, 46, 0.7); /* Saydam bir arka plan */
+    color: white;
+    text-decoration: none;
+}
+
+.button-style:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Hover efekti */
+}
+/* Diğer stil kurallarınızın yanı sıra aşağıdakileri ekleyin */
+
+.character-image-large {
+    max-width: 300px; /* Resmi istediğin boyuta ayarlayabilirsin */
+    display: block;
+    margin: 20px auto; /* Ortalamak için */
+    border: 5px solid white; /* Beyaz çerçeve */
+    border-radius: 10px; /* Kenarları yuvarlamak için (isteğe bağlı) */
+    padding: 5px; /* Çerçevenin içinde biraz boşluk bırakmak için */
+    
+}
+.sakura-background {
+    background-color: rgba(255, 182, 193, 0.878); /* Açık pembe, hafif saydam */
+    padding: 20px;
+    border-radius: 10px;
+}
+.kakashi-background {
+    background-color: rgba(84, 131, 40, 0.812); /* Açık mavi, hafif saydam */
+    padding: 20px;
+    border-radius: 10px;
+    color: black; /* Yazı rengi */
+}
+header {
+    padding: 20px;
+    background-color: rgba(255, 140, 0, 0.8); /* Naruto turuncusu */
+    color: white;
+    text-align: center; /* Merkez hizalama */
+}
+
+.home-button-container {
+    margin-top: 10px;
+}
+
+.button-style {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    background-color: rgba(255, 234, 46, 0.7);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button-style:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Hover efekti */
+}
+.welcome-text {
+    font-size: 3.0em; /* Dilediğin boyuta göre ayarla */
+}
+.return-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 234, 46, 0.7); /* Daha koyu bir turuncu renk */
+    color: white;
+    text-decoration: none;
+    border: 2px solid white; /* Beyaz çerçeve */
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.return-home:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Üzerine gelindiğinde daha koyu bir ton */
+}
+.naruto-paragraph {
+    background-color: #ffcc99; /* Soluk turuncu bir renk */
+    padding: 10px; /* Paragraf etrafında boşluk bırakır */
+    border-radius: 5px; /* Köşeleri hafif yuvarlatır */
+    color: whitesmoke; /* Metin rengi  */
+    margin-bottom: 15px; /* Paragraflar arası boşluk */
+}
